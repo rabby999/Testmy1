@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Billions Network — Genesis & Supermasks</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root{
+      --bg: #e6f7ff;
+      --accent1: #00a3ff;
+      --accent2: #0066ff;
+      --card: #ffffff;
+      --muted: #475569;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      background: linear-gradient(180deg,var(--bg), #f0fbff);
+      color:#051222;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    /* container */
+    .wrap{max-width:1200px;margin:28px auto;padding:20px;}
+
+    /* Header / welcome */
+    .header{ text-align:center; margin-bottom:18px; }
+    .site-title{ font-size:34px; font-weight:900; margin:8px 0; }
+    .top-logo{ width:160px; max-width:40%; margin:12px auto 10px; display:block; }
+    .join-btn{
+      display:inline-block;padding:10px 20px;border-radius:10px;background:linear-gradient(90deg,var(--accent2),var(--accent1));color:white;text-decoration:none;font-weight:800;box-shadow:0 8px 26px rgba(2,6,23,0.08);
+    }
+
+    /* shared section card style */
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.92));
+      border-radius:14px;
+      padding:22px;
+      box-shadow:0 12px 40px rgba(2,6,23,0.06);
+      margin-bottom:26px;
+    }
+
+    /* Genesis Section */
+    .gen-title{ font-size:36px; font-weight:900; text-align:center; margin:8px 0 18px; }
+    .gen-hero { display:grid; grid-template-columns: 1fr 420px; gap:20px; align-items:start; }
+    .gen-left { text-align:left; }
+    .gen-logo { width:220px; max-width:100%; display:block; margin:0 0 12px; animation: floatUp 4s ease-in-out infinite; }
+    @keyframes floatUp { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+    .gen-lead { font-size:18px; color:var(--muted); text-align:justify; line-height:1.7; margin-bottom:8px; }
+    .muted-small{ color:var(--muted); font-size:14px; }
+
+    .cd-row{ display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
+    .cd-pill{ background: rgba(255,255,255,0.8); padding:10px 12px; border-radius:10px; min-width:72px; text-align:center; font-weight:800; }
+
+    .gen-buy { display:flex; gap:20px; justify-content:center; margin-top:18px; flex-wrap:wrap; }
+    .buy-card { background:var(--card); padding:16px; border-radius:12px; width:260px; box-shadow:0 8px 26px rgba(2,6,23,0.04); text-align:center; }
+    .buy-card h3{ font-size:22px; margin:0 0 12px; }
+    .buy-btn { display:inline-block;padding:10px 16px;border-radius:10px;background:linear-gradient(90deg,var(--accent2),var(--accent1));color:white;text-decoration:none;font-weight:800; }
+
+    /* Supermasks Section */
+    .sm-title{ font-size:36px; font-weight:900; text-align:center; margin:8px 0 18px; }
+    .sm-hero { display:grid; grid-template-columns: 420px 1fr; gap:20px; align-items:center; }
+    .sm-logo { width:380px; max-width:100%; display:block; margin:0 auto; animation: slowLR 6s ease-in-out infinite; }
+    @keyframes slowLR { 0%,100%{transform:translateX(0)} 50%{transform:translateX(18px)} }
+    .sm-lead { font-size:18px; color:var(--muted); text-align:justify; line-height:1.7; }
+
+    .sm-meta{ display:flex; gap:16px; align-items:center; margin-top:16px; flex-wrap:wrap; }
+    .date-box{ background:var(--card); padding:12px 16px; border-radius:10px; box-shadow:0 8px 26px rgba(2,6,23,0.04); min-width:220px; }
+    .countdown { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+
+    .snapshot, .phases { background:var(--card); padding:18px; border-radius:12px; box-shadow:0 8px 28px rgba(2,6,23,0.04); }
+    .snapshot h3, .phases h3 { font-size:26px; margin:0 0 10px; font-weight:800; }
+    .snapshot .row { margin:8px 0; color:var(--muted); font-size:16px; line-height:1.6; }
+    .snapshot .label{ font-weight:800; color:#071033; margin-right:6px; }
+
+    .phase-grid{ display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
+    .phase{ background:#f9fcff; padding:12px; border-radius:10px; border:1px solid #eef2ff; color:var(--muted); line-height:1.5; font-size:15px; }
+    .phase.full{ grid-column:1 / -1; }
+
+    .final-cta{ text-align:center; margin-top:16px; font-weight:800; color:#071033; font-size:18px; }
+
+    /* responsive */
+    @media (max-width:980px){
+      .gen-hero, .sm-hero { grid-template-columns: 1fr; }
+      .wrap{ padding:12px; }
+      .top-logo{ width:140px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="site-title">Welcome to Billions Network</div>
+      <img class="top-logo" src="https://i.ibb.co/7kBVVcW/IMG-20250929-204151.png" alt="Billions Network Logo">
+      <div style="margin-top:8px;">
+        <a class="join-btn" href="https://signup.billions.network/sign-in" target="_blank" rel="noopener">Join Now</a>
+      </div>
+    </header>
+
+    <!-- Genesis Section -->
+    <section class="card" id="genesis">
+      <div class="gen-title">Billions Genesis NFT 1st Collection</div>
+
+      <div class="gen-hero">
+        <div class="gen-left">
+          <!-- Full-width overview text (no max-width) -->
+          <div class="gen-lead">
+            Billions is the human and AI network, built on mobile-first verification to scale the internet of value.
+            With accessibility and privacy at the forefront, Billions provides a decentralized and scalable alternative
+            to existing proof of humanity solutions. Billions Genesis is the first NFT drop created by Billions Network on Polygon.
+            Before we reach billions of humans and AI agents, we’re starting with the first Billionaires — the founding humans
+            belonging to the foundation of the Billions community. Now on Magic Eden, your favorite NFT marketplace!
+          </div>
+
+          <div style="margin-top:12px; text-align:center;" class="muted-small">
+            <strong>Why you buy Genesis?</strong>
+            <div style="margin-top:8px; font-size:16px; color:var(--muted);">
+              • 1500 Billions power points &nbsp; • Discord role "Genesis Holder" &nbsp; • Future rewards 🎁
+            </div>
+          </div>
+
+          <div class="gen-buy" aria-label="Marketplaces">
+            <div class="buy-card">
+              <h3>Magic Eden</h3>
+              <a class="buy-btn" href="https://magiceden.io/collections/polygon/billions-genesis" target="_blank">Buy Now</a>
+            </div>
+            <div class="buy-card">
+              <h3>OpenSea</h3>
+              <a class="buy-btn" href="https://opensea.io/collection/billions-genesis" target="_blank">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <aside style="text-align:center;">
+          <img class="gen-logo" src="https://i.ibb.co/8gnfdz8y/1000034170-removebg-preview.png" alt="Genesis NFT Logo">
+          <div class="muted-small" style="margin-top:8px;">Price: 0.05 ETH (illustrative)</div>
+
+          <div style="margin-top:14px; text-align:center;">
+            <div style="font-weight:800; margin-bottom:6px;">Mint opens in</div>
+            <div class="cd-row" aria-live="polite">
+              <div class="cd-pill"><span id="g-days">00</span><div style="font-size:12px;color:var(--muted);font-weight:700">Days</div></div>
+              <div class="cd-pill"><span id="g-hours">00</span><div style="font-size:12px;color:var(--muted);font-weight:700">Hours</div></div>
+              <div class="cd-pill"><span id="g-mins">00</span><div style="font-size:12px;color:var(--muted);font-weight:700">Mins</div></div>
+              <div class="cd-pill"><span id="g-secs">00</span><div style="font-size:12px;color:var(--muted);font-weight:700">Secs</div></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Supermasks Section -->
+    <section class="card" id="supermasks">
+      <div class="sm-title">Billions Supermasks NFT</div>
+
+      <div class="sm-hero">
+        <img class="sm-logo" src="https://i.ibb.co/fYk93nP6/IMG-20250930-185934.jpg" alt="Billions Supermasks Logo">
+
+        <div>
+          <div style="font-size:18px;font-weight:700;margin-bottom:10px;">
+            Our 2nd official NFT collection is here: <span style="color:var(--accent2)">Billions Supermasks</span>
+          </div>
+
+          <div class="sm-lead">
+            Each Supermask represents a unique human. In a world where bots, deepfakes, and AI clones blur reality,
+            your Supermask is your new identity superpower. Side by side — the collection celebrates real people,
+            verified identities, and the collision of human creativity with AI.
+          </div>
+
+          <div class="sm-meta">
+            <div class="date-box">
+              <div style="font-size:13px;color:var(--muted)">📆 Save the date</div>
+              <div style="font-weight:800; margin-top:6px;">Monday 6th October, 13:00 UTC</div>
+            </div>
+
+            <div style="min-width:220px;">
+              <div style="font-size:13px;color:var(--muted);font-weight:700;margin-bottom:6px;">Countdown</div>
+              <div class="countdown" aria-live="polite">
+                <div class="cd-pill"><span id="s-days">00</span><div style="font-size:12px;color:var(--muted);font-weight:700">Days</div></div>
+                <div class="cd-pill"><span id="s-hours">00</span><div style="font-size:12px;color:var(--muted);font-weight:700">Hours</div></div>
+                <div class="cd-pill"><span id="s-mins">00</span><div style="font-size:12px;color:var(--muted);font-weight:700">Mins</div></div>
+                <div class="cd-pill"><span id="s-secs">00</span><div style="font-size:12px;color:var(--muted);font-weight:700">Secs</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Snapshot & Phases -->
+          <div style="margin-top:18px; display:grid; grid-template-columns: 1fr 420px; gap:18px; align-items:start;">
+            <div class="snapshot">
+              <h3>Mint Snapshot</h3>
+              <div class="row"><span class="label">Name:</span> Billions Supermasks</div>
+              <div class="row"><span class="label">Description:</span> Supermasks NFT collection designed by Billions Network</div>
+              <div class="row"><span class="label">Utility:</span> Multiplier for Billions leaderboard on Kaito + Discord role + Future rewards</div>
+              <div class="row"><span class="label">Total Supply:</span> 8,888</div>
+              <div class="row"><span class="label">Mint Price:</span> $75 ( $50 with discount )</div>
+              <div class="row"><span class="label">Blockchain:</span> Polygon</div>
+            </div>
+
+            <div class="phases">
+              <h3>Phases</h3>
+              <div class="phase-grid">
+                <div class="phase"><strong>Phase 1 (Free mint / GTD)</strong><br>Earned via activities in the community, Genesis burn, for creators, yappers, team allocation and cross-community collabs</div>
+                <div class="phase"><strong>Phase 2 (Discount / GTD)</strong><br>Mint with discount guaranteed for community, Genesis holders, NFT collabs and creators</div>
+                <div class="phase"><strong>Phase 3 (Paid / GTD)</strong><br>Mint at a fixed price, guaranteed for NFT collabs</div>
+                <div class="phase"><strong>Phase 4 (Paid / FCFS)</strong><br>Mint at a fixed price, but spots are overallocated. First-come-first-serve (whoever is fastest gets it)</div>
+                <div class="phase full"><strong>Phase 5 (Public)</strong><br>First-come-first-serve, unfilled spots.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="final-cta">Mint your NFT and help write the next chapter of a network built to scale communities to billions of humans.</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    // Genesis countdown (example date: 2025-10-15T12:00:00Z)
+    const genDate = new Date("2025-10-15T12:00:00Z").getTime();
+    function updateGen(){
+      const now = Date.now();
+      let diff = genDate - now;
+      if(diff <= 0){
+        ['g-days','g-hours','g-mins','g-secs'].forEach(id=>document.getElementById(id).textContent='00');
+        return;
+      }
+      const d = Math.floor(diff / (1000*60*60*24)); diff -= d*(1000*60*60*24);
+      const h = Math.floor(diff / (1000*60*60)); diff -= h*(1000*60*60);
+      const m = Math.floor(diff / (1000*60)); diff -= m*(1000*60);
+      const s = Math.floor(diff / 1000);
+      document.getElementById('g-days').textContent = String(d).padStart(2,'0');
+      document.getElementById('g-hours').textContent = String(h).padStart(2,'0');
+      document.getElementById('g-mins').textContent = String(m).padStart(2,'0');
+      document.getElementById('g-secs').textContent = String(s).padStart(2,'0');
+    }
+    setInterval(updateGen,1000); updateGen();
+
+    // Supermasks countdown (Monday 6th October 2025 13:00:00 UTC)
+    const smDate = new Date("2025-10-06T13:00:00Z").getTime();
+    function updateSM(){
+      const now = Date.now();
+      let diff = smDate - now;
+      if(diff <= 0){
+        ['s-days','s-hours','s-mins','s-secs'].forEach(id=>document.getElementById(id).textContent='00');
+        return;
+      }
+      const d = Math.floor(diff / (1000*60*60*24)); diff -= d*(1000*60*60*24);
+      const h = Math.floor(diff / (1000*60*60)); diff -= h*(1000*60*60);
+      const m = Math.floor(diff / (1000*60)); diff -= m*(1000*60);
+      const s = Math.floor(diff / 1000);
+      document.getElementById('s-days').textContent = String(d).padStart(2,'0');
+      document.getElementById('s-hours').textContent = String(h).padStart(2,'0');
+      document.getElementById('s-mins').textContent = String(m).padStart(2,'0');
+      document.getElementById('s-secs').textContent = String(s).padStart(2,'0');
+    }
+    setInterval(updateSM,1000); updateSM();
+  </script>
+</body>
+</html>
